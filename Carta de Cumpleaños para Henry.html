@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Feliz Cumpleaños, Henry! 🎂✨ — De: Danae</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Pixel Art & Cozy Readable Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Press+Start+2P&family=Quicksand:wght@500;600;700&family=VT323&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --wood-dark: #5c3317;
+      --wood-mid: #8b4d22;
+      --wood-light: #b86f36;
+      --wood-highlight: #d98e4c;
+      --parchment-bg: #fff5db;
+      --parchment-border: #e3c28d;
+      --ink-color: #3d2314;
+      --stardrop-purple: #9b4dca;
+      --junimo-green: #69c958;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      color: var(--ink-color);
+      min-height: 100vh;
+      overflow-x: hidden;
+      /* Cielo atardecer / estrellado estilo Stardew Valley + Anime */
+      background: linear-gradient(180deg, #1b1d3c 0%, #3a2b58 32%, #7e4b6c 65%, #d67e6a 88%, #f5b971 100%);
+      background-attachment: fixed;
+    }
+
+    .font-pixel {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .font-vt {
+      font-family: 'VT323', monospace;
+    }
+
+    .font-letter {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .font-hand {
+      font-family: 'Patrick Hand', cursive;
+    }
+
+    /* Marco de madera pixel art estilo Stardew Valley */
+    .stardew-box {
+      background-color: var(--parchment-bg);
+      border: 4px solid var(--wood-dark);
+      box-shadow:
+        inset 0 0 0 4px var(--wood-mid),
+        inset 0 0 0 8px var(--wood-highlight),
+        inset 0 0 0 11px var(--wood-dark),
+        0 12px 28px rgba(15, 10, 30, 0.55);
+      border-radius: 12px;
+      position: relative;
+    }
+
+    /* Tornillos/remaches dorados en las esquinas del marco */
+    .stardew-box::before,
+    .stardew-box::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #f5c84c;
+      border: 2px solid var(--wood-dark);
+      border-radius: 2px;
+      z-index: 10;
+    }
+    .stardew-box::before {
+      top: 6px;
+      left: 6px;
+      box-shadow: calc(100% - 22px) 0 0 #f5c84c;
+    }
+
+    /* Cuadro de diálogo RPG */
+    .rpg-dialogue {
+      background: linear-gradient(180deg, #fff8e7 0%, #f5e0b7 100%);
+      border: 4px solid #5c3317;
+      box-shadow:
+        inset 0 0 0 3px #c98649,
+        0 6px 16px rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
+    }
+
+    /* Botones estilo retro / RPG */
+    .rpg-btn {
+      background: linear-gradient(180deg, #f8b84e 0%, #e0822b 100%);
+      border: 3px solid #4d260d;
+      box-shadow:
+        inset 0 3px 0 #ffe08a,
+        inset 0 -3px 0 #b55914,
+        0 4px 0 #3a1b07;
+      color: #3a1b07;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.15s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .rpg-btn:hover {
+      filter: brightness(1.06);
+      transform: translateY(-2px);
+    }
+
+    .rpg-btn:active {
+      transform: translateY(2px);
+      box-shadow:
+        inset 0 2px 0 #ffe08a,
+        0 1px 0 #3a1b07;
+    }
+
+    .rpg-btn-purple {
+      background: linear-gradient(180deg, #b86ce6 0%, #7d36ad 100%);
+      border: 3px solid #35104f;
+      box-shadow:
+        inset 0 3px 0 #e0aaff,
+        inset 0 -3px 0 #551d7a,
+        0 4px 0 #26093b;
+      color: #ffffff;
+    }
+
+    .rpg-btn-pink {
+      background: linear-gradient(180deg, #ff7eb3 0%, #e04882 100%);
+      border: 3px solid #59112e;
+      box-shadow:
+        inset 0 3px 0 #ffc2db,
+        inset 0 -3px 0 #ad2659,
+        0 4px 0 #3d091e;
+      color: #ffffff;
+    }
+
+    /* Animaciones Cozy & Pixel */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+
+    @keyframes junimoBounce {
+      0%, 100% { transform: translateY(0) scale(1, 1); }
+      30% { transform: translateY(-10px) scale(0.95, 1.06); }
+      60% { transform: translateY(0) scale(1.06, 0.94); }
+    }
+
+    @keyframes flameFlicker {
+      0%, 100% { transform: scale(1) rotate(-2deg); opacity: 1; }
+      25% { transform: scale(1.12, 0.92) rotate(3deg); opacity: 0.92; }
+      50% { transform: scale(0.94, 1.1) rotate(-3deg); opacity: 1; }
+      75% { transform: scale(1.08, 0.96) rotate(2deg); opacity: 0.95; }
+    }
+
+    @keyframes smokeRise {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.85; }
+      100% { transform: translateY(-28px) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 225, 105, 0.75)); }
+      50% { filter: drop-shadow(0 0 15px rgba(215, 130, 255, 0.95)); }
+    }
+
+    @keyframes heartPop {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.25); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .animate-float {
+      animation: floatSlow 3.4s ease-in-out infinite;
+    }
+
+    .animate-junimo {
+      animation: junimoBounce 1.8s ease-in-out infinite;
+    }
+
+    .candle-flame {
+      transform-origin: bottom center;
+      animation: flameFlicker 0.85s ease-in-out infinite;
+    }
+
+    .smoke-puff {
+      animation: smokeRise 1.4s ease-out forwards;
+    }
+
+    .stardrop-glow {
+      animation: pulseGlow 2.4s ease-in-out infinite;
+    }
+
+    .heart-badge {
+      animation: heartPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    /* Textura sutil de papel pergamino en el cuerpo de la carta */
+    .parchment-paper {
+      background-color: #fffaf0;
+      background-image:
+        radial-gradient(rgba(184, 111, 54, 0.08) 1px, transparent 0),
+        linear-gradient(180deg, rgba(255, 243, 214, 0.5) 0%, rgba(247, 226, 186, 0.45) 100%);
+      background-size: 20px 20px, 100% 100%;
+      border: 2px dashed #d4a36a;
+      box-shadow: inset 0 2px 10px rgba(139, 77, 34, 0.08);
+    }
+
+    /* Canvas de partículas de fondo */
+    #ambientCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Canvas de confeti / celebración */
+    #celebrationCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    /* Silueta de montañas y pinos estilo Stardew Valley al fondo */
+    .valley-horizon {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+    }
+
+    /* Estilos de impresión limpios para guardar como recuerdo */
+    @media print {
+      body {
+        background: #fff5db !important;
+      }
+      #ambientCanvas, #celebrationCanvas, .no-print, .valley-horizon {
+        display: none !important;
+      }
+      .stardew-box {
+        box-shadow: none !important;
+        border: 3px solid #5c3317 !important;
+      }
+      #envelopeScreen {
+        display: none !important;
+      }
+      #letterScreen {
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="relative flex flex-col items-center justify-center py-6 px-3 sm:px-6">
+
+  <!-- Lienzo de partículas ambientales (luciérnagas, pétalos de cerezo sakura, estrellas) -->
+  <canvas id="ambientCanvas"></canvas>
+  <!-- Lienzo de celebración (confeti, corazones, estrellas) -->
+  <canvas id="celebrationCanvas"></canvas>
+
+  <!-- Horizonte decorativo estilo Stardew Valley -->
+  <svg class="valley-horizon" viewBox="0 0 1440 160" preserveAspectRatio="none">
+    <path fill="#261938" d="M0,120 L160,55 L340,115 L520,40 L740,110 L960,48 L1180,105 L1340,60 L1440,95 L1440,160 L0,160 Z"/>
+    <path fill="#181226" d="M0,135 L110,95 L230,130 L390,85 L580,135 L790,90 L1020,132 L1240,88 L1440,125 L1440,160 L0,160 Z"/>
+  </svg>
+
+  <!-- Barra flotante superior: Control de música Chiptune & Estado -->
+  <div class="no-print fixed top-3 right-3 z-40 flex items-center gap-2">
+    <button id="musicToggleBtn" onclick="toggleMusic()" class="rpg-btn px-3 py-2 rounded-xl flex items-center gap-2 text-xs sm:text-sm font-bold shadow-lg" title="Activar o silenciar melodía cajita de música">
+      <span id="musicIcon" class="text-base">🎵</span>
+      <span id="musicLabel" class="font-vt text-base sm:text-lg tracking-wide">Música: OFF</span>
+    </button>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- PANTALLA 1: SOBRE / COFRE DE REGALO ESTILO STARDEW VALLEY -->
+  <!-- ========================================================= -->
+  <main id="envelopeScreen" class="relative z-10 w-full max-w-lg my-auto transition-all duration-700">
+    <div class="stardew-box p-6 sm:p-8 text-center">
+      <!-- Etiqueta superior RPG -->
+      <div class="inline-flex items-center gap-2 bg-[#5c3317] text-[#ffe599] px-3 py-1.5 rounded-lg mb-4 shadow">
+        <span class="text-xs">✨</span>
+        <span class="font-pixel text-[10px] sm:text-xs tracking-wider">NUEVO MENSAJE EN EL BUZÓN</span>
+        <span class="text-xs">✨</span>
+      </div>
+
+      <!-- Personajes Pixel Art decorativos arriba del sobre (Junimo + Stardrop + Cerezo) -->
+      <div class="flex items-center justify-center gap-6 my-3">
+        <!-- Junimo Verde SVG Pixel Art -->
+        <div class="animate-junimo" title="¡Un Junimo celebra tu cumpleaños!">
+          <svg width="48" height="48" viewBox="0 0 16 16" shape-rendering="crispEdges">
+            <!-- Hojita -->
+            <rect x="7" y="1" width="2" height="2" fill="#3b7d32"/>
+            <rect x="9" y="1" width="2" height="1" fill="#69c958"/>
+            <!-- Cuerpo -->
+            <rect x="5" y="3" width="6" height="2" fill="#69c958"/>
+            <rect x="3" y="5" width="10" height="6" fill="#69c958"/>
+            <rect x="4" y="11" width="8" height="2" fill="#52a843"/>
+            <!-- Sombra y brillo -->
+            <rect x="4" y="5" width="2" height="2" fill="#9be88b"/>
+            <!-- Ojos -->
+            <rect x="5" y="7" width="2" height="2" fill="#23170e"/>
+            <rect x="9" y="7" width="2" height="2" fill="#23170e"/>
+            <!-- Mejillas -->
+            <rect x="4" y="9" width="1" height="1" fill="#ff8fa3"/>
+            <rect x="11" y="9" width="1" height="1" fill="#ff8fa3"/>
+            <!-- Brazos y patitas -->
+            <rect x="2" y="7" width="1" height="2" fill="#52a843"/>
+            <rect x="13" y="7" width="1" height="2" fill="#52a843"/>
+            <rect x="5" y="13" width="2" height="2" fill="#3b7d32"/>
+            <rect x="9" y="13" width="2" height="2" fill="#3b7d32"/>
+          </svg>
+        </div>
+
+        <!-- Sobre mágico sellado con Stardrop -->
+        <div onclick="openLetter()" class="cursor-pointer group relative animate-float">
+          <svg class="w-40 h-32 sm:w-48 sm:h-36 mx-auto drop-shadow-md transition-transform duration-300 group-hover:scale-105" viewBox="0 0 64 48" shape-rendering="crispEdges">
+            <!-- Borde exterior oscuro -->
+            <rect x="2" y="4" width="60" height="40" fill="#5c3317"/>
+            <!-- Cuerpo del sobre -->
+            <rect x="4" y="6" width="56" height="36" fill="#f7dfb3"/>
+            <!-- Sombra interior -->
+            <polygon points="4,42 32,22 60,42" fill="#ebd09e"/>
+            <polygon points="4,6 32,26 60,6" fill="#fff0d1"/>
+            <!-- Líneas de pliegue pixeladas -->
+            <path d="M4 6 L32 26 L60 6" stroke="#8b4d22" stroke-width="2" fill="none"/>
+            <path d="M4 42 L25 23 M60 42 L39 23" stroke="#b86f36" stroke-width="1.5" fill="none"/>
+            <!-- Sello de Stardrop / Corazón en el centro -->
+            <rect x="26" y="18" width="12" height="12" rx="2" fill="#7d36ad" stroke="#35104f" stroke-width="1.5"/>
+            <!-- Estrella pixelada dentro del sello -->
+            <rect x="31" y="20" width="2" height="8" fill="#ffe066"/>
+            <rect x="28" y="23" width="8" height="2" fill="#ffe066"/>
+            <rect x="30" y="22" width="4" height="4" fill="#fff3b0"/>
+          </svg>
+          <span class="block font-vt text-lg text-[#8b4d22] mt-1 group-hover:text-[#5c3317]">[ Toca el sobre ]</span>
+        </div>
+
+        <!-- Pollito / Gatito Cozy Pixel Art -->
+        <div class="animate-junimo" style="animation-delay: 0.5s;" title="¡Pío! ¡Feliz cumple!">
+          <svg width="46" height="46" viewBox="0 0 16 16" shape-rendering="crispEdges">
+            <!-- Cresta -->
+            <rect x="7" y="2" width="2" height="2" fill="#e63946"/>
+            <!-- Cabeza y cuerpo -->
+            <rect x="5" y="4" width="6" height="3" fill="#ffd166"/>
+            <rect x="4" y="7" width="8" height="5" fill="#ffd166"/>
+            <rect x="5" y="12" width="6" height="1" fill="#f4a261"/>
+            <!-- Ojo y pico -->
+            <rect x="6" y="6" width="1" height="2" fill="#23170e"/>
+            <rect x="9" y="6" width="1" height="2" fill="#23170e"/>
+            <rect x="7" y="8" width="2" height="1" fill="#f77f00"/>
+            <!-- Alita -->
+            <rect x="10" y="8" width="2" height="3" fill="#f4a261"/>
+            <!-- Patitas -->
+            <rect x="6" y="13" width="1" height="2" fill="#f77f00"/>
+            <rect x="9" y="13" width="1" height="2" fill="#f77f00"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Destinatario y Remitente -->
+      <div class="bg-[#fffaf0] border-2 border-[#d4a36a] rounded-xl p-4 my-4 shadow-inner">
+        <p class="font-pixel text-xs sm:text-sm text-[#5c3317] mb-2">PARA: <span class="text-[#9b4dca]">HENRY</span> 🎂</p>
+        <p class="font-pixel text-xs sm:text-sm text-[#5c3317]">DE: <span class="text-[#e04882]">DANAE</span> 🫶🏻</p>
+      </div>
+
+      <p class="font-hand text-xl sm:text-2xl text-[#6e3f1d] mb-5">
+        "¡Has recibido una carta muy especial llena de cariño y bendiciones!"
+      </p>
+
+      <!-- Botón Principal de Apertura -->
+      <button onclick="openLetter()" class="rpg-btn w-full sm:w-auto px-7 py-4 rounded-xl font-pixel text-xs sm:text-sm tracking-wide flex items-center justify-center gap-3 mx-auto">
+        <span>💌</span>
+        <span>ABRIR CARTA</span>
+        <span>✨</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- PANTALLA 2: CARTA COMPLETA E INTERACTIVA DE CUMPLEAÑOS    -->
+  <!-- ========================================================= -->
+  <section id="letterScreen" class="hidden opacity-0 transform translate-y-6 transition-all duration-700 relative z-10 w-full max-w-3xl mx-auto space-y-5 pb-10">
+
+    <!-- 1. CUADRO DE DIÁLOGO RPG SUPERIOR (Avatar Pixel-Anime + Nivel de Amistad) -->
+    <div class="rpg-dialogue p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+      <!-- Retrato Pixel-Anime de Danae / Emisaria de Cumpleaños -->
+      <div class="relative flex-shrink-0">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-b from-[#ffd6e7] to-[#ffe8c2] border-4 border-[#5c3317] flex items-center justify-center overflow-hidden shadow">
+          <!-- Avatar chibi anime + lazo -->
+          <svg class="w-14 h-14 sm:w-16 sm:h-16" viewBox="0 0 24 24" shape-rendering="crispEdges">
+            <!-- Cabello trasero -->
+            <rect x="5" y="4" width="14" height="15" fill="#4a2c2a"/>
+            <!-- Lazo rosado -->
+            <rect x="6" y="2" width="3" height="2" fill="#ff7eb3"/>
+            <rect x="15" y="2" width="3" height="2" fill="#ff7eb3"/>
+            <!-- Rostro -->
+            <rect x="7" y="6" width="10" height="9" fill="#ffe0bd"/>
+            <!-- Flequillo -->
+            <rect x="6" y="4" width="12" height="3" fill="#5e3a37"/>
+            <rect x="7" y="7" width="2" height="2" fill="#5e3a37"/>
+            <rect x="15" y="7" width="2" height="2" fill="#5e3a37"/>
+            <!-- Ojos anime brillantes -->
+            <rect x="8" y="10" width="2" height="2" fill="#2b1b17"/>
+            <rect x="14" y="10" width="2" height="2" fill="#2b1b17"/>
+            <rect x="8" y="10" width="1" height="1" fill="#ffffff"/>
+            <rect x="14" y="10" width="1" height="1" fill="#ffffff"/>
+            <!-- Sonrojito -->
+            <rect x="7" y="12" width="2" height="1" fill="#ff9ebb"/>
+            <rect x="15" y="12" width="2" height="1" fill="#ff9ebb"/>
+            <!-- Sonrisa -->
+            <rect x="11" y="13" width="2" height="1" fill="#d9534f"/>
+            <!-- Ropita cozy -->
+            <rect x="7" y="16" width="10" height="6" fill="#ff7eb3"/>
+            <rect x="10" y="16" width="4" height="2" fill="#fff5db"/>
+          </svg>
+        </div>
+        <span class="absolute -bottom-2 -right-2 bg-[#ff7eb3] text-white text-[10px] font-pixel px-1.5 py-0.5 rounded border-2 border-[#5c3317]">♥</span>
+      </div>
+
+      <!-- Texto del cuadro de diálogo RPG -->
+      <div class="flex-1 text-center sm:text-left">
+        <div class="flex flex-wrap items-center justify-center sm:justify-between gap-2 mb-1">
+          <span class="font-pixel text-[11px] sm:text-xs text-[#8b4d22]">DANAE (Amiga de Aventuras)</span>
+          <span class="bg-[#5c3317] text-[#ffd166] font-pixel text-[9px] sm:text-[10px] px-2.5 py-1 rounded-md">
+            NIVEL DE AMISTAD: MÁXIMO ♥
+          </span>
+        </div>
+        <p id="rpgTypewriter" class="font-vt text-xl sm:text-2xl text-[#3d2314] leading-snug">
+          "¡Feliz cumpleaños, Henry! Preparé esta cartita especial con todo mi corazón para que comiences tu día con una gran sonrisa..."
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. TARJETA PRINCIPAL DE LA CARTA (Marco Madera Stardew Valley) -->
+    <article class="stardew-box p-5 sm:p-9">
+      <!-- Encabezado con Stardrop y Flores de Cerezo -->
+      <header class="text-center border-b-2 border-[#d4a36a] pb-5 mb-6">
+        <div class="flex items-center justify-center gap-3 sm:gap-5 mb-3">
+          <!-- Flor de Cerezo Sakura SVG -->
+          <svg class="w-8 h-8 sm:w-9 sm:h-9 animate-float" viewBox="0 0 24 24">
+            <path fill="#ff9ebb" d="M12 2C13.5 5 15 6 15 8C15 10 12 12 12 12C12 12 9 10 9 8C9 6 10.5 5 12 2Z"/>
+            <path fill="#ffb3c6" d="M22 12C19 13.5 18 15 16 15C14 15 12 12 12 12C12 12 14 9 16 9C18 9 19 10.5 22 12Z"/>
+            <path fill="#ff9ebb" d="M12 22C10.5 19 9 18 9 16C9 14 12 12 12 12C12 12 15 14 15 16C15 18 13.5 19 12 22Z"/>
+            <path fill="#ffb3c6" d="M2 12C5 10.5 6 9 8 9C10 9 12 12 12 12C12 12 10 15 8 15C6 15 5 13.5 2 12Z"/>
+            <circle cx="12" cy="12" r="2.5" fill="#ffd166"/>
+          </svg>
+
+          <!-- Stardrop (Fruta Estelar de Stardew Valley) -->
+          <div class="stardrop-glow" title="¡Encontraste una Fruta Estelar! Tu mente se llena de pensamientos de amistad.">
+            <svg class="w-11 h-11 sm:w-12 sm:h-12" viewBox="0 0 16 16" shape-rendering="crispEdges">
+              <!-- Hojitas arriba -->
+              <rect x="6" y="1" width="4" height="1" fill="#52b788"/>
+              <rect x="7" y="2" width="2" height="1" fill="#40916c"/>
+              <!-- Puntas de la estrella morada -->
+              <rect x="7" y="3" width="2" height="2" fill="#9b4dca"/>
+              <rect x="2" y="6" width="12" height="3" fill="#9b4dca"/>
+              <rect x="4" y="5" width="8" height="6" fill="#b565e8"/>
+              <rect x="4" y="11" width="3" height="3" fill="#7b2cbf"/>
+              <rect x="9" y="11" width="3" height="3" fill="#7b2cbf"/>
+              <!-- Brillo interior -->
+              <rect x="6" y="6" width="2" height="2" fill="#e0aaff"/>
+              <rect x="7" y="8" width="2" height="2" fill="#ffd166"/>
+            </svg>
+          </div>
+
+          <!-- Flor de Cerezo Sakura SVG -->
+          <svg class="w-8 h-8 sm:w-9 sm:h-9 animate-float" style="animation-delay: 1s;" viewBox="0 0 24 24">
+            <path fill="#ff9ebb" d="M12 2C13.5 5 15 6 15 8C15 10 12 12 12 12C12 12 9 10 9 8C9 6 10.5 5 12 2Z"/>
+            <path fill="#ffb3c6" d="M22 12C19 13.5 18 15 16 15C14 15 12 12 12 12C12 12 14 9 16 9C18 9 19 10.5 22 12Z"/>
+            <path fill="#ff9ebb" d="M12 22C10.5 19 9 18 9 16C9 14 12 12 12 12C12 12 15 14 15 16C15 18 13.5 19 12 22Z"/>
+            <path fill="#ffb3c6" d="M2 12C5 10.5 6 9 8 9C10 9 12 12 12 12C12 12 10 15 8 15C6 15 5 13.5 2 12Z"/>
+            <circle cx="12" cy="12" r="2.5" fill="#ffd166"/>
+          </svg>
+        </div>
+
+        <h1 class="font-pixel text-base sm:text-xl md:text-2xl text-[#5c3317] leading-relaxed tracking-wide">
+          ¡Feliz Cumpleaños, Henry! 🎂✨
+        </h1>
+        <p class="font-vt text-xl sm:text-2xl text-[#8b4d22] mt-1">
+          ~ Edición Especial de Cumpleaños • Valle de la Amistad ~
+        </p>
+      </header>
+
+      <!-- CUERPO ÍNTEGRO Y EXACTO DE LA CARTA -->
+      <div class="parchment-paper rounded-xl p-5 sm:p-8 text-[#361f12] text-base sm:text-lg leading-relaxed sm:leading-loose space-y-5 font-medium">
+        <p>
+          Mi Querido Cumpleañero Henry, en éste día tan especial el cual naciste, quiero desearte las más lindas bendiciones traídas de arriba, quiero que comiences tu día agradecido, sonríe al cielo por una nueva oportunidad de vida que Dios te regala 🎁
+        </p>
+
+        <p>
+          Por mi parte, me encuentro muy agradecida con él por regalarme está linda amistad, llena de imperfecciones tal vez, pero sincera. Gracias por estos años de amistad que me regalas, y Gracias también por ser VALIENTE a Diario. Veo como vas con miedo al frente, pero luchas ! Y eso te hace fuerte, valoro aquella parte de ti. Gracias por no rendirte. Cada camino, cada dificultad te ha convertido en la persona que actualmente eres, y te puedo decir con seguridad que eres mucho mejor de lo que fuiste ayer ✨️🥇la única competencia es la que tienes contigo mismo a diario.
+        </p>
+
+        <p>
+          Eres una parte bonita de mi vida que no quiero perder 🎎  Deseo de corazón que Dios te conceda las peticiones de tu corazón, bendiga y guarde de ti y tu Familia.
+        </p>
+
+        <p>
+          Siempre agradecida con tu vida 🎀<br>
+          Y por muchos cumpleaños y momentos que pueda pasar junto a ti.<br>
+          Y seguro debes pensar que no es la tradición que siempre hacemos de enviarnos el saludo a las 00:00,<br>
+          Pero ésta vez quería que comenzaras tu día con una linda sonrisa que de seguro te iba a sacar está carta, porque la escribí con el corazón.
+        </p>
+
+        <div class="pt-3 border-t border-[#e3c28d] flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <p class="font-semibold text-[#5c3317] text-lg sm:text-xl">
+            Me despido con un abrazo virtual ♥︎<br>
+            Te quiere tu amiga Danae 🫶🏻
+          </p>
+
+          <!-- Pequeño mando retro decorativo -->
+          <div class="flex items-center gap-2 self-end opacity-90" title="Player 1: Henry & Player 2: Danae">
+            <svg width="42" height="28" viewBox="0 0 21 14" shape-rendering="crispEdges">
+              <rect x="2" y="2" width="17" height="10" rx="2" fill="#4a4e69" stroke="#22223b" stroke-width="1"/>
+              <rect x="5" y="5" width="1" height="4" fill="#f2e9e4"/>
+              <rect x="4" y="6" width="3" height="2" fill="#f2e9e4"/>
+              <rect x="14" y="6" width="2" height="2" fill="#ff7eb3"/>
+              <rect x="16" y="5" width="2" height="2" fill="#ffd166"/>
+            </svg>
+            <span class="font-vt text-base text-[#8b4d22]">CO-OP MODE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- SECCIÓN INTERACTIVA 1: ESTADÍSTICAS DE HENRY (PERFIL RPG) -->
+      <!-- ========================================================= -->
+      <div class="mt-7 bg-[#f5e1b8] border-3 border-[#8b4d22] rounded-xl p-4 sm:p-5 shadow-inner">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-pixel text-xs sm:text-sm text-[#5c3317] flex items-center gap-2">
+            <span>⚔️</span>
+            <span>ESTADÍSTICAS DE HENRY (RPG)</span>
+          </h2>
+          <span class="font-vt text-lg bg-[#69c958] text-[#1a3a14] px-2.5 py-0.5 rounded font-bold border border-[#2d6a22]">
+            LVL UP! 🎂
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <!-- Stat 1: Valentía -->
+          <div class="bg-[#fffaf0] p-3 rounded-lg border-2 border-[#c98649]">
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="font-vt text-xl font-bold text-[#5c3317]">🛡️ Valentía</span>
+              <span class="font-pixel text-[10px] text-[#e0822b]">100/100</span>
+            </div>
+            <div class="w-full h-3.5 bg-[#e6ccb2] rounded-full overflow-hidden border border-[#5c3317]">
+              <div class="h-full bg-gradient-to-r from-[#f77f00] to-[#fcbf49] w-full"></div>
+            </div>
+          </div>
+
+          <!-- Stat 2: Fortaleza -->
+          <div class="bg-[#fffaf0] p-3 rounded-lg border-2 border-[#c98649]">
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="font-vt text-xl font-bold text-[#5c3317]">✨ Fortaleza</span>
+              <span class="font-pixel text-[10px] text-[#9b4dca]">MAX</span>
+            </div>
+            <div class="w-full h-3.5 bg-[#e6ccb2] rounded-full overflow-hidden border border-[#5c3317]">
+              <div class="h-full bg-gradient-to-r from-[#7b2cbf] to-[#c77dff] w-full"></div>
+            </div>
+          </div>
+
+          <!-- Stat 3: Amistad con Danae -->
+          <div class="bg-[#fffaf0] p-3 rounded-lg border-2 border-[#c98649]">
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-vt text-xl font-bold text-[#5c3317]">💖 Amistad con Danae</span>
+              <span class="font-pixel text-[10px] text-[#e04882]">10/10</span>
+            </div>
+            <div id="friendshipHearts" class="text-sm sm:text-base tracking-tighter text-[#e63946] leading-none pt-1">
+              ♥♥♥♥♥♥♥♥♥♥
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- SECCIÓN INTERACTIVA 2: PASTEL DE CUMPLEAÑOS PIXEL ART     -->
+      <!-- ========================================================= -->
+      <div class="mt-6 bg-gradient-to-b from-[#fff8e7] to-[#f7e2b9] border-2 border-[#c98649] rounded-xl p-5 text-center">
+        <h3 class="font-pixel text-xs sm:text-sm text-[#5c3317] mb-2">
+          🎂 ¡PIDE UN DESEO DE CUMPLEAÑOS! 🎂
+        </h3>
+        <p id="cakeInstruction" class="font-hand text-xl text-[#6e3f1d] mb-3">
+          Cierra los ojos, pide tu deseo más bonito y presiona el botón para soplar las velitas:
+        </p>
+
+        <!-- Pastel Pixel Art Interactivo en SVG -->
+        <div class="relative inline-block my-2 cursor-pointer" onclick="blowCandles()" title="Haz clic para soplar las velitas">
+          <svg id="birthdayCakeSvg" class="w-48 h-44 sm:w-56 sm:h-48 mx-auto drop-shadow" viewBox="0 0 64 56" shape-rendering="crispEdges">
+            <!-- Plato del pastel -->
+            <rect x="8" y="48" width="48" height="3" fill="#e0e1dd"/>
+            <rect x="12" y="51" width="40" height="2" fill="#adb5bd"/>
+
+            <!-- Base inferior del pastel (Chocolate / Bizcocho Stardew) -->
+            <rect x="13" y="34" width="38" height="14" fill="#6f371e"/>
+            <rect x="15" y="34" width="34" height="12" fill="#8c4828"/>
+            <!-- Relleno de crema rosa -->
+            <rect x="15" y="40" width="34" height="2" fill="#ff9ebb"/>
+            <!-- Glaseado superior derritiéndose -->
+            <rect x="13" y="32" width="38" height="4" fill="#fff0f3"/>
+            <rect x="16" y="36" width="4" height="3" fill="#fff0f3"/>
+            <rect x="26" y="36" width="5" height="4" fill="#fff0f3"/>
+            <rect x="38" y="36" width="4" height="3" fill="#fff0f3"/>
+            <rect x="46" y="36" width="3" height="2" fill="#fff0f3"/>
+
+            <!-- Segundo piso del pastel -->
+            <rect x="19" y="21" width="26" height="11" fill="#ffb3c6"/>
+            <rect x="21" y="21" width="22" height="9" fill="#ffccd5"/>
+            <!-- Glaseado blanco arriba -->
+            <rect x="19" y="19" width="26" height="3" fill="#ffffff"/>
+            <rect x="22" y="22" width="3" height="2" fill="#ffffff"/>
+            <rect x="31" y="22" width="4" height="3" fill="#ffffff"/>
+            <rect x="39" y="22" width="3" height="2" fill="#ffffff"/>
+
+            <!-- Fresitas decorativas -->
+            <rect x="15" y="29" width="3" height="3" fill="#e63946"/>
+            <rect x="16" y="28" width="1" height="1" fill="#52b788"/>
+            <rect x="46" y="29" width="3" height="3" fill="#e63946"/>
+            <rect x="47" y="28" width="1" height="1" fill="#52b788"/>
+
+            <!-- VELA 1 (Izquierda) -->
+            <rect x="23" y="12" width="2" height="7" fill="#4cc9f0"/>
+            <rect x="23" y="14" width="2" height="1" fill="#ffffff"/>
+            <rect x="23" y="17" width="2" height="1" fill="#ffffff"/>
+            <!-- Llama 1 -->
+            <g id="flame1" class="candle-flame">
+              <rect x="23" y="7" width="2" height="4" fill="#ff9e00"/>
+              <rect x="23" y="8" width="2" height="2" fill="#ffea00"/>
+            </g>
+            <!-- Humito 1 (oculto hasta soplar) -->
+            <g id="smoke1" class="hidden">
+              <rect x="23" y="6" width="2" height="2" fill="#ced4da"/>
+              <rect x="22" y="3" width="2" height="2" fill="#dee2e6"/>
+            </g>
+
+            <!-- VELA 2 (Centro) -->
+            <rect x="31" y="11" width="2" height="8" fill="#f72585"/>
+            <rect x="31" y="13" width="2" height="1" fill="#ffffff"/>
+            <rect x="31" y="16" width="2" height="1" fill="#ffffff"/>
+            <!-- Llama 2 -->
+            <g id="flame2" class="candle-flame" style="animation-delay: 0.2s;">
+              <rect x="31" y="6" width="2" height="4" fill="#ff9e00"/>
+              <rect x="31" y="7" width="2" height="2" fill="#ffea00"/>
+            </g>
+            <!-- Humito 2 -->
+            <g id="smoke2" class="hidden">
+              <rect x="31" y="5" width="2" height="2" fill="#ced4da"/>
+              <rect x="32" y="2" width="2" height="2" fill="#dee2e6"/>
+            </g>
+
+            <!-- VELA 3 (Derecha) -->
+            <rect x="39" y="12" width="2" height="7" fill="#7209b7"/>
+            <rect x="39" y="14" width="2" height="1" fill="#ffffff"/>
+            <rect x="39" y="17" width="2" height="1" fill="#ffffff"/>
+            <!-- Llama 3 -->
+            <g id="flame3" class="candle-flame" style="animation-delay: 0.4s;">
+              <rect x="39" y="7" width="2" height="4" fill="#ff9e00"/>
+              <rect x="39" y="8" width="2" height="2" fill="#ffea00"/>
+            </g>
+            <!-- Humito 3 -->
+            <g id="smoke3" class="hidden">
+              <rect x="39" y="6" width="2" height="2" fill="#ced4da"/>
+              <rect x="38" y="3" width="2" height="2" fill="#dee2e6"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Mensaje al soplar velas -->
+        <div id="wishMessage" class="hidden my-3 p-3 bg-[#fff3b0] border-2 border-[#e0822b] rounded-xl font-pixel text-[11px] sm:text-xs text-[#5c3317] heart-badge">
+          ✨ ¡Deseo enviado al cielo! Que Dios conceda cada petición de tu corazón, Henry ✨
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-2 no-print">
+          <button id="blowBtn" onclick="blowCandles()" class="rpg-btn px-5 py-3 rounded-xl font-pixel text-[11px] sm:text-xs flex items-center gap-2">
+            <span>🌬️</span>
+            <span>PEDIR UN DESEO Y SOPLAR VELAS</span>
+          </button>
+
+          <button id="relightBtn" onclick="relightCandles()" class="hidden rpg-btn-purple px-4 py-3 rounded-xl font-pixel text-[10px] sm:text-xs flex items-center gap-2">
+            <span>🕯️</span>
+            <span>ENCENDER VELAS DE NUEVO</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- BOTONES DE ACCIÓN FINALES (ABRAZO VIRTUAL & RECUERDO)     -->
+      <!-- ========================================================= -->
+      <div class="no-print mt-7 pt-5 border-t-2 border-[#d4a36a] flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        <button onclick="sendVirtualHug()" class="rpg-btn-pink w-full sm:w-auto px-6 py-3.5 rounded-xl font-pixel text-[11px] sm:text-xs flex items-center justify-center gap-2 shadow-md">
+          <span>🫶🏻</span>
+          <span>ENVIAR ABRAZO VIRTUAL</span>
+          <span>♥︎</span>
+        </button>
+
+        <button onclick="window.print()" class="rpg-btn w-full sm:w-auto px-5 py-3.5 rounded-xl font-pixel text-[10px] sm:text-xs flex items-center justify-center gap-2">
+          <span>📜</span>
+          <span>GUARDAR RECUERDO</span>
+        </button>
+      </div>
+
+      <!-- Caja de notificación dulce al enviar abrazo virtual -->
+      <div id="hugNotification" class="hidden mt-4 p-4 bg-[#ffe5ec] border-2 border-[#ff7eb3] rounded-xl text-center heart-badge">
+        <p class="font-pixel text-xs sm:text-sm text-[#a4133c] mb-1">
+          ¡ABRAZO VIRTUAL RECIBIDO CON ÉXITO! 🫶🏻💖
+        </p>
+        <p class="font-hand text-xl text-[#590d22]">
+          "¡Un abrazo enorme de vuelta para ti, Henry! Que hoy y siempre seas muy feliz." — Danae ✨
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <script>
+    /* =========================================================================
+       1. SISTEMA DE PARTÍCULAS AMBIENTALES (Luciérnagas, Pétalos Sakura, Estrellas)
+       ========================================================================= */
+    const ambientCanvas = document.getElementById('ambientCanvas');
+    const ambientCtx = ambientCanvas.getContext('2d');
+    let ambientParticles = [];
+
+    function resizeCanvases() {
+      ambientCanvas.width = window.innerWidth;
+      ambientCanvas.height = window.innerHeight;
+      celebrationCanvas.width = window.innerWidth;
+      celebrationCanvas.height = window.innerHeight;
+    }
+
+    class AmbientParticle {
+      constructor() {
+        this.reset(true);
+      }
+
+      reset(initial = false) {
+        this.x = Math.random() * ambientCanvas.width;
+        this.y = initial ? Math.random() * ambientCanvas.height : -15;
+        const types = ['sakura', 'firefly', 'star'];
+        this.type = types[Math.floor(Math.random() * types.length)];
+        this.size = this.type === 'sakura' ? (Math.random() * 5 + 4) : (Math.random() * 2.5 + 1.5);
+        this.speedY = this.type === 'sakura' ? (Math.random() * 0.8 + 0.4) : (Math.random() * 0.3 - 0.15);
+        this.speedX = this.type === 'sakura' ? (Math.random() * 0.8 - 0.3) : (Math.random() * 0.4 - 0.2);
+        this.angle = Math.random() * Math.PI * 2;
+        this.spin = (Math.random() - 0.5) * 0.03;
+        this.alpha = Math.random() * 0.7 + 0.3;
+        this.pulseSpeed = Math.random() * 0.03 + 0.01;
+      }
+
+      update() {
+        this.x += this.speedX + Math.sin(this.angle) * 0.25;
+        this.y += this.speedY;
+        this.angle += this.spin;
+
+        if (this.type === 'firefly' || this.type === 'star') {
+          this.alpha += Math.sin(Date.now() * this.pulseSpeed) * 0.015;
+          this.alpha = Math.max(0.2, Math.min(0.95, this.alpha));
+        }
+
+        if (this.y > ambientCanvas.height + 20 || this.x < -20 || this.x > ambientCanvas.width + 20) {
+          this.reset(false);
+        }
+      }
+
+      draw() {
+        ambientCtx.save();
+        ambientCtx.globalAlpha = this.alpha;
+        ambientCtx.translate(this.x, this.y);
+
+        if (this.type === 'sakura') {
+          // Pétalo de cerezo anime
+          ambientCtx.rotate(this.angle);
+          ambientCtx.fillStyle = '#ffb3c6';
+          ambientCtx.beginPath();
+          ambientCtx.ellipse(0, 0, this.size, this.size * 0.6, 0, 0, Math.PI * 2);
+          ambientCtx.fill();
+        } else if (this.type === 'firefly') {
+          // Luciérnaga cálida Stardew Valley
+          ambientCtx.fillStyle = '#ffe066';
+          ambientCtx.shadowColor = '#ffd166';
+          ambientCtx.shadowBlur = 8;
+          ambientCtx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        } else {
+          // Estrellita pixelada
+          ambientCtx.fillStyle = '#ffffff';
+          ambientCtx.fillRect(-1, -this.size, 2, this.size * 2);
+          ambientCtx.fillRect(-this.size, -1, this.size * 2, 2);
+        }
+
+        ambientCtx.restore();
+      }
+    }
+
+    function initAmbientParticles() {
+      ambientParticles = [];
+      const count = Math.min(55, Math.floor(window.innerWidth / 22));
+      for (let i = 0; i < count; i++) {
+        ambientParticles.push(new AmbientParticle());
+      }
+    }
+
+    /* =========================================================================
+       2. SISTEMA DE CELEBRACIÓN (Confeti, Corazones y Estrellas al interactuar)
+       ========================================================================= */
+    const celebrationCanvas = document.getElementById('celebrationCanvas');
+    const celCtx = celebrationCanvas.getContext('2d');
+    let burstParticles = [];
+
+    class BurstParticle {
+      constructor(x, y, mode = 'confetti') {
+        this.x = x;
+        this.y = y;
+        this.mode = mode; // 'confetti', 'hearts', 'stars'
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = Math.random() * 7 + 3;
+        this.vx = Math.cos(angle) * velocity;
+        this.vy = Math.sin(angle) * velocity - 3;
+        this.gravity = 0.16;
+        this.size = Math.random() * 8 + 6;
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = (Math.random() - 0.5) * 10;
+        this.life = 1.0;
+        this.decay = Math.random() * 0.012 + 0.008;
+        const colors = ['#ff7eb3', '#ffd166', '#9b4dca', '#69c958', '#4cc9f0', '#ff595e'];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += this.gravity;
+        this.vx *= 0.98;
+        this.rotation += this.rotationSpeed;
+        this.life -= this.decay;
+      }
+
+      draw() {
+        if (this.life <= 0) return;
+        celCtx.save();
+        celCtx.globalAlpha = Math.max(0, this.life);
+        celCtx.translate(this.x, this.y);
+        celCtx.rotate((this.rotation * Math.PI) / 180);
+
+        if (this.mode === 'hearts') {
+          celCtx.font = `${Math.floor(this.size * 2)}px serif`;
+          celCtx.fillText('💖', -this.size / 2, this.size / 2);
+        } else if (this.mode === 'stars') {
+          celCtx.font = `${Math.floor(this.size * 2)}px serif`;
+          celCtx.fillText('✨', -this.size / 2, this.size / 2);
+        } else {
+          celCtx.fillStyle = this.color;
+          celCtx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size * 0.7);
+        }
+        celCtx.restore();
+      }
+    }
+
+    function triggerBurst(mode = 'confetti', amount = 65) {
+      const centerX = celebrationCanvas.width / 2;
+      const centerY = celebrationCanvas.height * 0.45;
+      for (let i = 0; i < amount; i++) {
+        burstParticles.push(new BurstParticle(centerX + (Math.random() - 0.5) * 120, centerY, mode));
+      }
+    }
+
+    function animateLoop() {
+      ambientCtx.clearRect(0, 0, ambientCanvas.width, ambientCanvas.height);
+      ambientParticles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      celCtx.clearRect(0, 0, celebrationCanvas.width, celebrationCanvas.height);
+      burstParticles = burstParticles.filter(p => p.life > 0);
+      burstParticles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      requestAnimationFrame(animateLoop);
+    }
+
+    /* =========================================================================
+       3. SINTETIZADOR DE CAJITA DE MÚSICA / CHIPTUNE (Web Audio API sin archivos)
+       ========================================================================= */
+    let audioCtx = null;
+    let isMusicPlaying = false;
+    let melodyTimer = null;
+
+    // Melodía dulce de "Cumpleaños Feliz" estilo cajita de música cozy
+    const birthdayNotes = [
+      { freq: 261.63, dur: 0.35 }, // C4
+      { freq: 261.63, dur: 0.25 }, // C4
+      { freq: 293.66, dur: 0.6 },  // D4
+      { freq: 261.63, dur: 0.6 },  // C4
+      { freq: 349.23, dur: 0.6 },  // F4
+      { freq: 329.63, dur: 1.0 },  // E4
+
+      { freq: 261.63, dur: 0.35 }, // C4
+      { freq: 261.63, dur: 0.25 }, // C4
+      { freq: 293.66, dur: 0.6 },  // D4
+      { freq: 261.63, dur: 0.6 },  // C4
+      { freq: 392.00, dur: 0.6 },  // G4
+      { freq: 349.23, dur: 1.0 },  // F4
+
+      { freq: 261.63, dur: 0.35 }, // C4
+      { freq: 261.63, dur: 0.25 }, // C4
+      { freq: 523.25, dur: 0.6 },  // C5
+      { freq: 440.00, dur: 0.6 },  // A4
+      { freq: 349.23, dur: 0.5 },  // F4
+      { freq: 329.63, dur: 0.5 },  // E4
+      { freq: 293.66, dur: 1.0 },  // D4
+
+      { freq: 466.16, dur: 0.35 }, // Bb4
+      { freq: 466.16, dur: 0.25 }, // Bb4
+      { freq: 440.00, dur: 0.6 },  // A4
+      { freq: 349.23, dur: 0.6 },  // F4
+      { freq: 392.00, dur: 0.6 },  // G4
+      { freq: 349.23, dur: 1.2 }   // F4
+    ];
+
+    let noteIndex = 0;
+
+    function playMusicBoxNote(freq, duration) {
+      if (!audioCtx || !isMusicPlaying) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        // Onda triangular suave estilo Nintendo / Cajita de música
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration * 1.3);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration * 1.35);
+      } catch (e) {
+        // Ignorar si el navegador bloquea audio sin interacción
+      }
+    }
+
+    function scheduleNextNote() {
+      if (!isMusicPlaying) return;
+      const note = birthdayNotes[noteIndex];
+      playMusicBoxNote(note.freq, note.dur);
+      noteIndex = (noteIndex + 1) % birthdayNotes.length;
+      const pause = noteIndex === 0 ? 1400 : note.dur * 850;
+      melodyTimer = setTimeout(scheduleNextNote, pause);
+    }
+
+    function startMusic() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      if (!isMusicPlaying) {
+        isMusicPlaying = true;
+        updateMusicUI();
+        scheduleNextNote();
+      }
+    }
+
+    function stopMusic() {
+      isMusicPlaying = false;
+      clearTimeout(melodyTimer);
+      updateMusicUI();
+    }
+
+    function toggleMusic() {
+      if (isMusicPlaying) {
+        stopMusic();
+      } else {
+        startMusic();
+      }
+    }
+
+    function updateMusicUI() {
+      const icon = document.getElementById('musicIcon');
+      const label = document.getElementById('musicLabel');
+      if (isMusicPlaying) {
+        icon.textContent = '🎶';
+        label.textContent = 'Música: ON';
+      } else {
+        icon.textContent = '🔇';
+        label.textContent = 'Música: OFF';
+      }
+    }
+
+    // Efecto de sonido retro corto (ej. al abrir sobre o soplar velas)
+    function playChime(freqs = [523.25, 659.25, 783.99, 1046.5]) {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        freqs.forEach((f, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, audioCtx.currentTime + idx * 0.08);
+          gain.gain.setValueAtTime(0.06, audioCtx.currentTime + idx * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + idx * 0.08 + 0.35);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(audioCtx.currentTime + idx * 0.08);
+          osc.stop(audioCtx.currentTime + idx * 0.08 + 0.4);
+        });
+      } catch (e) {}
+    }
+
+    /* =========================================================================
+       4. INTERACCIONES DE LA CARTA (Abrir sobre, Soplar velas, Abrazo virtual)
+       ========================================================================= */
+    function openLetter() {
+      const envelope = document.getElementById('envelopeScreen');
+      const letter = document.getElementById('letterScreen');
+
+      // Efecto mágico + música suave
+      playChime([523.25, 659.25, 783.99, 1046.5]);
+      startMusic();
+      triggerBurst('confetti', 85);
+
+      envelope.style.opacity = '0';
+      envelope.style.transform = 'scale(0.92) translateY(-15px)';
+
+      setTimeout(() => {
+        envelope.classList.add('hidden');
+        letter.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        requestAnimationFrame(() => {
+          letter.classList.remove('opacity-0', 'translate-y-6');
+        });
+      }, 450);
+    }
+
+    let candlesLit = true;
+
+    function blowCandles() {
+      if (!candlesLit) return;
+      candlesLit = false;
+
+      // Apagar llamas y mostrar humito
+      ['1', '2', '3'].forEach(num => {
+        document.getElementById(`flame${num}`).classList.add('hidden');
+        const smoke = document.getElementById(`smoke${num}`);
+        smoke.classList.remove('hidden');
+        smoke.classList.add('smoke-puff');
+      });
+
+      document.getElementById('wishMessage').classList.remove('hidden');
+      document.getElementById('blowBtn').classList.add('hidden');
+      document.getElementById('relightBtn').classList.remove('hidden');
+      document.getElementById('cakeInstruction').textContent = '¡Pide todos los deseos que quieras, hoy es tu día especial!';
+
+      playChime([659.25, 783.99, 987.77, 1318.5]);
+      triggerBurst('stars', 75);
+    }
+
+    function relightCandles() {
+      candlesLit = true;
+      ['1', '2', '3'].forEach(num => {
+        document.getElementById(`flame${num}`).classList.remove('hidden');
+        const smoke = document.getElementById(`smoke${num}`);
+        smoke.classList.add('hidden');
+        smoke.classList.remove('smoke-puff');
+      });
+
+      document.getElementById('wishMessage').classList.add('hidden');
+      document.getElementById('blowBtn').classList.remove('hidden');
+      document.getElementById('relightBtn').classList.add('hidden');
+      document.getElementById('cakeInstruction').textContent = 'Cierra los ojos, pide tu deseo más bonito y presiona el botón para soplar las velitas:';
+    }
+
+    function sendVirtualHug() {
+      const hugBox = document.getElementById('hugNotification');
+      hugBox.classList.remove('hidden');
+      // Reiniciar animación si se presiona varias veces
+      hugBox.classList.remove('heart-badge');
+      void hugBox.offsetWidth;
+      hugBox.classList.add('heart-badge');
+
+      playChime([587.33, 739.99, 880.00, 1174.66]);
+      triggerBurst('hearts', 60);
+    }
+
+    // Inicialización al cargar la página
+    window.addEventListener('resize', () => {
+      resizeCanvases();
+      initAmbientParticles();
+    });
+
+    window.onload = function () {
+      resizeCanvases();
+      initAmbientParticles();
+      animateLoop();
+    };
+  </script>
+</body>
+</html>
